@@ -13,7 +13,7 @@
             font-style: normal;
         }
 
-        html, body, h1, h2, a, figure {
+        html, body, h1, h2, a, figure, div {
             overflow-anchor: none;
             margin: 0;
             padding: 0;
@@ -28,6 +28,7 @@
             color: #000;
             text-align: center;
             text-decoration: none;
+            box-sizing: border-box;
         }
         html, body {
             width: 100vw;
@@ -48,12 +49,13 @@
             margin-bottom: 112px;
         }
 
+        .footer-container {
+            padding-bottom: 52px;
+        }
+
         .text {
             font-size: 12px;
             letter-spacing: .02em;
-        }
-        .text:last-child {
-            margin-bottom: 52px;
         }
         .social-icons {
             margin-top: 12px;
@@ -102,6 +104,11 @@
 
 <style>
 
+    .images-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
 
     .images {
         margin: 0 auto 84px;
@@ -113,7 +120,7 @@
         z-index: 100;
         transform-style: preserve-3d;
         perspective: 1000px;
-        display: flex;
+        box-sizing: border-box;
     }
 
     [data-img] {
@@ -203,11 +210,14 @@
         }
     }
 </style>
-<div class="images">
-    <figure data-img="1"></figure>
-    <figure data-img="2"></figure>
-    <figure data-img="3"></figure>
-    <figure data-img="4"></figure>
+
+<div class="images-container">
+    <div class="images">
+        <figure data-img="1"></figure>
+        <figure data-img="2"></figure>
+        <figure data-img="3"></figure>
+        <figure data-img="4"></figure>
+    </div>
 </div>
 
 <script>
@@ -253,7 +263,7 @@
 
 
 
-
+<footer class="footer-container">
 
 <div class="text">Discover more on social media:</div>
 <div class="social-icons">
@@ -284,6 +294,6 @@
 
 <div class="text">Airaicci © All rights reserved. Contact <a href="mailto:airaicci@gmail.com">airaicci@gmail.com</a></div>
 
-
+</footer>
 </body>
 </html>
